@@ -1,0 +1,19 @@
+#
+# Ergänzen Sie bitte hier die Python Befehle für Aufgabe 1!
+#
+import matplotlib.pyplot as plt
+import numpy as np
+
+ax.plot([-16, -12], [0, 0], 'k')  
+ax.plot([-6, 6], [0, 0], 'k')     
+ax.plot([12, 16], [0, 0], 'k')    
+ax.plot([15, 16], [8, 0], 'k')     
+
+display(fig)
+
+
+
+
+
+
+
