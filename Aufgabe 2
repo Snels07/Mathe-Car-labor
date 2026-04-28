@@ -1,0 +1,16 @@
+#
+# Ergänzen Sie bitte hier die Python Befehle für Aufgabe 2!
+#
+
+t = np.linspace(0, 2*np.pi, 500)
+r = 3
+
+x_Vorderrad = r*np.cos(t) - 9
+y_Vorderrad = r*np.sin(t)
+x_Hinterrad = r*np.cos(t) + 9
+y_Hinterrad = r*np.sin(t)
+
+ax.plot(x_Vorderrad, y_Vorderrad, 'k')
+ax.plot(x_Hinterrad, y_Hinterrad, 'k')
+
+display(fig)
