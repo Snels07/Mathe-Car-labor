@@ -1,0 +1,22 @@
+#
+# Ergänzen Sie bitte hier die Python Befehle für Aufgabe 4!
+#
+x = np.array([-16, -12, -9, 0, 12, 15])
+y = np.array([0, 4, 5, 4, 7, 8])
+
+B = np.vander(x, N=6, increasing=True)
+b = np.linalg.solve(B, y)
+
+x_Linie = np.linspace(-16, 15, 500)
+y_Linie = sum(coef * (x_Linie**i) for i, coef in enumerate(b))
+
+ax.plot(x_Linie, y_Linie, 'k')
+ax.plot([-16, -12, -9, 0, 12, 15], [0, 4, 5, 4,7 ,8], 'ro')
+display(fig)
+
+
+
+
+
+
+
