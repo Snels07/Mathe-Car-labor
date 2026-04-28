@@ -1,0 +1,13 @@
+#
+# Ergänzen Sie bitte hier die Python Befehle für Aufgabe 3!
+#
+a0 = 9
+a1 = 23/126
+a2 = -11/378
+
+x_Dach = np.linspace(-9, 12, 500)
+y_Dach = a0 + a1*x_Dach + a2*x_Dach**2
+
+ax.plot(x_Dach, y_Dach, 'k')
+ax.plot([-9, 0, 12], [5, 9 ,7], 'ro')
+display(fig)
