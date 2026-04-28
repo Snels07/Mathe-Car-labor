@@ -1,0 +1,20 @@
+#
+# Ergänzen Sie bitte hier die Python Befehle für Aufgabe 5!
+#
+x_alle = np.concatenate([x_Linie, [np.nan], x_Dach, [np.nan], x_Vorderrad, [np.nan], x_Hinterrad, [np.nan], x_4, [np.nan], x_3, [np.nan], x_2, [np.nan], x_1])
+y_alle = np.concatenate([y_Linie, [np.nan], y_Dach, [np.nan], y_Vorderrad, [np.nan], y_Hinterrad, [np.nan], y_4, [np.nan], y_3, [np.nan], y_2, [np.nan], y_1])
+
+XY_normal = np.array([x_alle, y_alle])
+alpha = np.radians(-30)
+R = np.array([
+    [np.cos(alpha), -np.sin(alpha)],
+    [np.sin(alpha), np.cos(alpha)]
+])
+
+XY_rotiert = R @ XY_normal
+
+ax.plot(XY_rotiert[0], XY_rotiert[1], 'r--')
+display(fig)
+
+
+
