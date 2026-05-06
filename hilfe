@@ -1,0 +1,22 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import math
+
+fig, ax = plt.subplots()
+
+#*Ändern je nach Grenze der Achsen 
+x_min, x_max, y_min, y_max = -4, 4.5, -5, 7.5 
+
+stepx = 1
+stepy = 1
+minor_stepx = 0.5
+minor_stepy = 0.5
+
+ax.axis([x_min,x_max,y_min,y_max])
+ax.set_xticks(np.arange(x_min,x_max,stepx))
+ax.set_yticks(np.arange(y_min,y_max,stepy))
+ax.set_xticks(np.arange(x_min, x_max + minor_stepx, minor_stepx), minor=True)
+ax.set_yticks(np.arange(y_min, y_max + minor_stepy, minor_stepy), minor=True)
+ax.set_aspect('equal')
+ax.grid(which='minor', alpha=0.1)
+ax.grid(which='major', alpha=0.5)
